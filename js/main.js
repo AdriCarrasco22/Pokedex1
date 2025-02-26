@@ -27,7 +27,7 @@ function mostrarPokemons(lista) {
 function mostrarPokemon(poke) {
     let tipos = poke.types.map(type => `<p class="${type.type.name} tipo">${type.type.name}</p>`).join('');
 
-    let pokeId = poke.id.toString().padStart(3, "0"); // Formatear ID con ceros a la izquierda
+    let pokeId = poke.id.toString().padStart(3, "0"); 
 
     const div = document.createElement("div");
     div.classList.add("pokemon");
@@ -53,7 +53,7 @@ function mostrarPokemon(poke) {
     listaPokemon.append(div);
 }
 
-// Evento para los botones de filtro
+
 botonesHeader.forEach(boton => boton.addEventListener("click", (event) => {
     const botonId = event.currentTarget.id;
 
@@ -68,5 +68,5 @@ botonesHeader.forEach(boton => boton.addEventListener("click", (event) => {
     }
 }));
 
-// Llamar a la función para cargar los Pokémon al inicio
+
 obtenerPokemons();

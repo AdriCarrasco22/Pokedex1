@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +9,18 @@
     <link rel="icon" type="imgage/png" href="img/pokeball.png">
     <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
-    
+
     <header>
         <nav class="nav">
             <span id="titulo">
                 <img src="./img/pokeball.png" alt="Logo Bola" id="pokeball1">
-            <img src="./img/logo.png" alt="Logo Pokédex">
-            <img src="./img/pokeball.png" alt="Logo Bola" id="pokeball2">
+                <img src="./img/logo.png" alt="Logo Pokédex">
+                <img src="./img/pokeball.png" alt="Logo Bola" id="pokeball2">
             </span>
             <ul class="nav-list">
-                <li class="nav-item"><button class="btn btn-header" id="ver-todos">Ver todos</button></li> 
+                <li class="nav-item"><button class="btn btn-header" id="ver-todos">Ver todos</button></li>
                 <li class="nav-item"><button class="btn btn-header normal" id="normal">Normal</button></li>
                 <li class="nav-item"><button class="btn btn-header fire" id="fire">Fuego</button></li>
                 <li class="nav-item"><button class="btn btn-header water" id="water">Agua</button></li>
@@ -40,15 +42,68 @@
         </nav>
     </header>
     <main>
-        
+        <div class="izquierda"> 
+        <div class="sidebar" id="sidebar">
+            
+            <a href="#">INICIO</a>
+
+            <a href="/img/Curriculum Adrián Carrasco Fernández.pdf" download="Curriculum Adrián Carrasco Fernández">
+                <button class="btn_descarga">INFO DEL CREADOR</button>
+            </a>
+
+        </div>
+        <script>
+            function toggleSidebar() {
+                var sidebar = document.getElementById("sidebar");
+                if (sidebar.style.left === "-250px") {
+                    sidebar.style.left = "0";
+                } else {
+                    sidebar.style.left = "-250px";
+                }
+            }
+        </script>
+        </div>
+
         <div id="todos">
             <div class="pokemon-todos" id="listaPokemon">
-                
+
             </div>
+        </div>
+
+        <div class="derecha">
+            <button class="toggle-btn-right" onclick="toggleSidebarRight()">☰</button>
+            <div class="sidebar-right" id="sidebarRight">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="/img/pokemon.png" style="height: 30px; width: 70px;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3>Últimas Novedades</h3>
+                      <a href="https://www.pokemon.com/es"><img src="/img/pikachu.jpg" style="width: 200px; height: 70px; box-shadow: 1px 4px 4px  black; border-radius: 10px;" alt=""></a>
+                      <p style="color: white; padding-bottom: 10px;">Enterate de las últimas novedades acerca del mundo pokemon a través de la Web Oficial.</p>
+                      <a href="https://www.pokemon.com/es" class="btn btn-primary" style= " text-decoration: none; color: black;" id="visitar">Web Oficial</a>
+                    </div>
+                  </div>
+
+            </div>
+            <script>
+                function toggleSidebarRight() {
+                    var sidebar = document.getElementById("sidebarRight");
+                    if (sidebar.style.right === "-250px") {
+                        sidebar.style.right = "0";
+                    } else {
+                        sidebar.style.right = "-250px";
+                    }
+                }
+            </script>
+        
+            <script src="./js/main.js"></script>
         </div>
 
     </main>
 
-    <script src="./js/main.js"></script>
+
+
+    
 </body>
+
 </html>
