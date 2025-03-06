@@ -44,7 +44,8 @@ button {
 }
 
 body {
-    min-height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: var(--clr-gray);
 }
 
@@ -52,9 +53,10 @@ header {
     padding-block: 1rem;
     box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, .3);
     background-color: lightslategray;
-    position: fixed;
+    position: sticky;
     min-width: 100%;
     z-index: 1;
+    top: 0;
     
 }
 
@@ -115,35 +117,42 @@ main {
     
     margin: 0 auto;
     display: grid;
-    grid-template-columns: auto 3fr auto;
     width: 100%;
+    display: flex;
     
 }
 
 .pokemon-todos {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    padding-top: 220px;
+    padding: 2rem;
     width: 80%;
     margin: auto;
 }
 
-@media screen and (max-width: 700px) {
-    .pokemon-todos {
-        display: flex;
-        flex-wrap: wrap;
+
+
+
+@media (max-width: 1000px) {
+    main{
+        display: block;
+    }
+    
+    .izquierda{
+        width: 100%;
+        
+        top: 240px;
+    }
+    .derecha{
+        width: 100%;
     }
     .sidebar-right{
-        position: fixed;
+        position: relative;
     }
+
 }
 
-@media screen and (min-width: 700px) {
-    .pokemon-todos {
-        grid-template-columns: repeat(3,1fr);
-    }
-}
 
 
 
@@ -376,14 +385,14 @@ main {
 
 
  .sidebar {
-            width: 250px;
-            height: 100vh;
+            
+            height: 100%;
             background: lightslategrey;
             color: black;
             position: sticky;
             top: 0;
             transition: left 0.3s;
-            padding-top: 200px;
+            
         }
         .sidebar a {
             display: block;
@@ -407,15 +416,14 @@ main {
         }
 
         .sidebar-right {
-            width: 250px;
-            height: 100vh;
+            
+            height: 100%;
             background: lightslategrey;
             color: white;
             position:sticky;
-            
             top: 0;
             transition: right 0.3s;
-            padding-top: 200px;
+            
         }
         .sidebar-right a {
             display: block;
@@ -451,3 +459,22 @@ main {
     color: white;
     text-align: left;
 }
+
+.botones-container {
+    display: none; /* Ocultos por defecto */
+    gap: 10px;
+}
+
+.boton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}
+

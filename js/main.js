@@ -1,7 +1,7 @@
 const listaPokemon = document.querySelector("#listaPokemon");
 const botonesHeader = document.querySelectorAll(".btn-header");
 let URL = "https://pokeapi.co/api/v2/pokemon/";
-let pokemons = []; // Array para almacenar los Pokémon y evitar múltiples llamadas
+let pokemons = []; // Array para almacenar los Pokémon
 
 // Función para obtener y almacenar los Pokémon
 async function obtenerPokemons() {
