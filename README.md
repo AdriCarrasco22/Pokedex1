@@ -1,4 +1,4 @@
-## 📖 Pokédex 
+## 🕹 Pokédex 
 
 ¡Bienvenido a mi Pokédex! Este proyecto es una web interactiva que permite explorar información sobre los diferentes Pokémon, sus tipos, habilidades y estadísticas.
 
@@ -23,6 +23,11 @@
 ---
 
 ## 📂 Estructura del Proyecto
+Como estructura de mi Proyecto encontraremos: 
+✔ Por un lado una cerpeta "IMG" donde encontraremos las diferentes imagenes que he utilizado para realizar la Web
+✔ Por otro lado encontraremos una carpeta llamada "CSS" que como su propio nombre indica contendrá todo el CSS empleado en la Web
+✔ También disponemos de una última carpeta la cual se llamará "JS" en la que se encuentra todo el JavaScript empleado en mi Web
+✔ Por ultimo y no menos importante, encontraremos el archivo .HTML el cual contendrá la estructura de mi Web.
 
 ---
 
@@ -30,7 +35,7 @@
 
 1. Clona este repositorio:
     ```bash
-    git clone https://github.com/tuusuario/pokedex.git
+    git clone https://github.com/AdriCarrasco22/Pokedex1.git
     ```
 2. Abre el archivo `index.html` en tu navegador.
 
@@ -44,9 +49,9 @@ Solo necesitas un navegador moderno para ejecutar la Pokédex ya sea desde un di
 
 ## 👨‍💻 Autor
 
-**Tu Nombre**  
+**Adrián Carrasco Fernández**  
 📧 Contacto: adriancarrasco2307@gmail.com  
-🐙 GitHub: [https://github.com/tuusuario](https://github.com/tuusuario)
+🐙 GitHub: [https://github.com/AdriCarrasco22](https://github.com/AdriCarrasco22)
 
 ---
 
