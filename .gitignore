@@ -1,0 +1,7 @@
+# ---- Ignorar todos los CSS ----
+*.css
+
+# ---- Archivos de sistema ----
+.DS_Store
+Thumbs.db
+*.log
