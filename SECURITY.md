@@ -36,3 +36,47 @@ A continuación, voy a explicar de forma más detallada cada una de las instrucc
     * Versionarlos puede llenar el historial de cambios con información irrelevante.
   
 # 📚👈 Recuperación del repositorio en caso de perdida
+
+   La recuperación del repositorio se garantiza combinando buenas prácticas de administración, copias de seguridad y políticas de recuperación como son las siguientes:
+   
+  ### 🔹 1. Control de versiones (propio de Git)
+
+   * Cada clon local del repositorio contiene todo el historial de commits, ramas y etiquetas.
+
+   * Si el servidor se pierde, cualquier clon completo puede servir para reconstruir el repositorio central.
+
+### 🔹 2. Copias de seguridad
+
+   * Los sistemas de hosting mantienen copias de todos los repositorios.
+
+   * En repositorios autoalojados (ej. GitLab CE, Gitea, repos en un servidor propio) se recomienda configurar respaldos periódicos de:
+
+      * Directorios .git
+
+      * Bases de datos asociadas (si aplica, ej. en GitLab)
+
+      * Configuración del servidor.
+
+### 🔹 3. Redundancia y replicación
+
+   * Plataformas como GitHub y GitLab utilizan almacenamiento distribuido y replicación geográfica, lo que protege frente a fallos en un único servidor o datacenter.
+
+   * En entornos propios, puede configurarse mirror repositories o réplicas para recuperación rápida.
+
+### 🔹 4. Políticas de recuperación
+
+   * Hooks de _pre-receive/post-receive_ pueden validar datos y evitar corrupciones en pushes.
+
+   * Revisiones de integridad (comandos como _git fsck_) ayudan a detectar objetos dañados en el repositorio.
+
+   * Snapshots automáticos (por ejemplo en GitLab o GitHub) permiten restaurar repositorios a estados anteriores.
+
+### 🔹 5. Procedimientos en caso de pérdida
+
+   * Localizar un clon actualizado del repositorio.
+
+   * Crear un nuevo repositorio vacío en el servidor.
+
+   * Empujar de nuevo (_git push --mirror_) todo el historial desde el clon de respaldo.
+
+   * En caso de errores graves en servidores gestionados (GitHub, GitLab.com, Bitbucket Cloud), su infraestructura de backup y soporte técnico garantiza la recuperación.
